@@ -1,0 +1,54 @@
+- memori itu lokasi penyimpanan data, setiap alokasi akan diletakkan di dalam sebuah blok di dalaam memori.
+  contoh:
+        - ilustrasi memori punya 6 blok kosong, yang bisa dilakukan alokasi.
+
+        |-----------------------------|
+        |    |    |    |    |    |    |
+        |-----------------------------|
+
+- variables itu nama yang diberikan pada alokasi memori dan nilainya bisa berubah-ubah atau dimanipulasi
+sesuai kemauan dan setiap saaat. Jadi variable itu nilainya bisa berubah meskipun letaknya di alokasi memori yang sama.
+
+  contoh:
+        var a int = 10 // semula variable a nilainya 10
+        a = 100        // kemudian di ubah nilainya jadi 100
+
+        |-----------------------------------|
+        |  a = 10  |    |    |    |    |    |
+        |-----------------------------------|
+
+        berubah jadi
+        |-----------------------------------|
+        |  a = 100 |    |    |    |    |    |
+        |-----------------------------------|
+
+- constants itu juga nama yang diberikan pada alokasi memori, tetapi nilainya tidak dapat diubah / gak bisa di assign ulang nilainya.
+
+- memori secara umum penggunaannya ada 2, Stack dan Heap
+    - Stack: memori di alokasikan pada saat compile time
+        - alokasi memori pada stack itu terstruktur dan ukuran alokasi memori sudah diketahui di awal.
+        - programmer tidak perlu memikirkan alokasi dan de-alokasi memori pada program, karena sudah dilakukan otomatis oleh compiler.
+        - alokasi memori pada stack bisa dibilang temporary memori, karena alokasi memori akan otomatis hilang / di de-allocate ketika function selesai di eksekusi.
+        - alokasi memori pada stack aman / thread safe karena memori hanya bisa di akses oleh thread owner.
+        - alokasi memori dan de-alokasi memori sangat cepat jika dibandingkan dengan heap.
+        - stack menggunakan lebih kecil memori jika dibandingkan dengan heap.
+        - alokasi memori tidak fleksible dan ukuran alokasi tidak bisa dirubah, sedangkan heap fleksible dan bisa di-alter.
+
+    - Heap : memori ditentukan oleh software itu sendiri, karena dilakuan pada saat runtime.
+        - alokasi memori pada heap tidak thread safe, karena memori dapat diakses oleh semua thread.
+            - kesalahan dalam meng-handle memori pada heap menjadi penyebab utama dari memory leak pada program.
+        - heap tidak punya mekanisme untuk de-alokasi memori secara otomatis, makanya perlu adanya garbace collector untuk membersihkan memori yang sudah gak terpakai.
+        - akses ke memori pada heap lebih lambat jika dibandingkan dengan stack
+        - ukuran memori heap lebih besar dibandingkan dengan stack
+        - heap dapat diakses kapanpun dan oleh siapapun selama seluruh program masih berjalan.
+
+
+
+referensi:
+- https://mayurwadekar2.medium.com/escape-analysis-in-golang-ee40a1c064c1
+- https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/
+
+belum dibaca:
+- https://blog.devgenius.io/in-depth-analysis-of-golang-memory-escape-edfbfb856913
+- https://faun.pub/golang-escape-analysis-reduce-pressure-on-gc-6bde1891d625
+- https://developpaper.com/detailed-explanation-of-the-mechanism-of-golang-escape-analysis
