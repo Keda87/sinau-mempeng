@@ -47,8 +47,12 @@ sesuai kemauan dan setiap saaat. Jadi variable itu nilainya bisa berubah meskipu
 referensi:
 - https://mayurwadekar2.medium.com/escape-analysis-in-golang-ee40a1c064c1
 - https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/
+- https://blog.devgenius.io/in-depth-analysis-of-golang-memory-escape-edfbfb856913
 
 belum dibaca:
-- https://blog.devgenius.io/in-depth-analysis-of-golang-memory-escape-edfbfb856913
 - https://faun.pub/golang-escape-analysis-reduce-pressure-on-gc-6bde1891d625
 - https://developpaper.com/detailed-explanation-of-the-mechanism-of-golang-escape-analysis
+- https://medium.com/@sivssdn/is-your-garbage-collector-making-program-slow-go-lang-293a23b4c8d9
+- https://medium.com/swlh/memory-optimizations-for-go-systems-48d95cf64a13
+- https://www.ardanlabs.com/blog/2019/07/garbage-collection-in-go-part3-gcpacing.html
+- https://blog.gopheracademy.com/advent-2018/avoid-gc-overhead-large-heaps/
