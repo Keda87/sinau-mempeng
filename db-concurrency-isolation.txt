@@ -8,7 +8,7 @@
 
 - Hal yang perlu diketahui sebelum isolation level adalah istilah Read Phenomena, permasalahan dalam proses baca data di DBMS.
     - Dirty Read:
-        - terjasi ketika transaction1 bisa baca hasil perubahan transaction2 yang belum di commit.
+        - terjadi ketika transaction1 bisa baca hasil perubahan transaction2 yang belum di commit.
 
         misal dari table "products" berikut: 
         |------------------------------------|
@@ -24,7 +24,21 @@
         SELECT stock FROM products WHERE id = 1; // dapet nilai 9           ROLLBACK; // stock kembali ke nilai semula 10
 
         - dari contoh diatas, hasil akhir dari transaction 1 akan mendapatkan nilai 9 yang seharusnya tidak boleh terjadi, karena transaction 2 melakukan rollback ke nilai semula.
+
+    - Non-repeatable read:
+        - terjadi ketika query row 2x atau lebih, dan setiap query menghasilkan query yang berbeda karena ada perubahan dari transaction lain yang berhasil commit.
         
+        Contoh:
+
+        transaction 1:                                                      transaction 2:
+        SELECT stock FROM products WHERE id = 1; // dapet hasil 10          BEGIN;
+                                                                            UPDATE products SET stock = 11 WHERE id = 1;  // belum commit
+                                                                            COMMIT
+        --------------------------------------------------------------------------------------------------------------------------------
+        SELECT stock FROM products WHERE id = 1; // dapet nilai 11
+
+    - Phantom read:
+        - 
 
 Referensi:
 https://en.wikipedia.org/wiki/Isolation_(database_systems)#Concurrency_control
