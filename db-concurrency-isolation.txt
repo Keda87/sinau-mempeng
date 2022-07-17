@@ -1,14 +1,15 @@
 - Untuk menangani permasalahan data race / race condition di DBMS perlu dilakukan concurrency control.
 - Concurency control di DBMS bisa dilakukan menggunakan isolation level di database transaction.
-- Beberapa jenis isolation level di DBMS:
-    - Read Uncommitted
-    - Read Committed (default isolation level di DBMS)
-    - Repeatable Read
-    - Serializable
-
+- DB transaction itu harus memenuhi syarat ACID:
+    - Atomicity: serangkaian operasi berhasil atau DB tidak berubah jika terjadi kegagalan.
+    - Consistency: state DB akan tetap valid setelah transaction.
+    - Isolation: DB transaction yang bersifat concurrent tidak saling menggangu satu sama lain.
+    - Durability: data yang berhasil ditulis di dalam DB transaction harus direkam di persistent storage.
+- Ada beberapa hal yang mengakibatkan DB transaction di interfensi, sehingga mengakibatkan read-phenomenom.
 - Hal yang perlu diketahui sebelum isolation level adalah istilah Read Phenomena, permasalahan dalam proses baca data di DBMS.
     - Dirty Read:
         - dirty read bisa terjadi jika menggunakan isolation level read-uncommitted, tetapi ini tidak di implement di postgres, jadi di postgres gak akan terjadi dirty read.
+        - jika di postgres kita set read-uncommitted maka behaviornya akan sama seperti read-committed.
         - terjadi ketika transaction1 bisa baca hasil perubahan transaction2 yang belum di commit.
 
         misal dari table "products" berikut: 
@@ -28,7 +29,7 @@
 
     - Non-repeatable read:
         - non-repeatable read bisa terjadi kalo mode isolation nya read-uncommitted atau read-committed
-        - terjadi ketika query row 2x atau lebih, dan setiap query menghasilkan query yang berbeda karena ada perubahan dari transaction lain yang berhasil commit.
+        - terjadi ketika query pada row yang sama 2x atau lebih, dan setiap query menghasilkan query yang berbeda karena ada perubahan dari transaction lain yang berhasil commit.
         
         Contoh:
 
@@ -41,11 +42,61 @@
         SELECT stock FROM products WHERE id = 1; // dapet nilai 11
 
     - Phantom read:
-        - 
+        - sedikit mirip dengan kasus non-repeatable read, namun terjadi di beberapa row yang memenuhi kondisi dan ketika dijalankan 2x atau lebih, hasilnya berbeda.
+        - bisa terjadi jika isolation level read-uncommitted atau read-committed.
+
+        Contoh:
+        
+        transaction 1:                                                      transaction 2:
+        BEGIN;
+        SELECT COUNT(id) FROM products WHERE stock >= 10; // dapet hasil 1  BEGIN;
+                                                                            INSERT INTO products(name, stock) VALUES('jeruk', 25);
+                                                                            COMMIT;
+        --------------------------------------------------------------------------------------------------------------------------------
+        SELECT COUNT(id) FROM products WHERE stock >= 10; // dapet hasil 2
+
+    - Serialization anomaly:
+        - akan dibahas dibawah, karena perbedaan handling di MySQL dan PostgreSQL.
+
+- Beberapa jenis isolation level di DBMS, dimulai dari yang terendah hingga tertinggi:
+    - Read Uncommitted: 
+        - ini cuman ada di MySQL, kalo di PostgreSQL dia akan berlaku sama seperti Read Committed. 
+        - Di MySQL akan terjadi dirty-read tapi tidak berlaku di PostgreSQL.
+    - Read Committed: 
+        - di support di MySQL dan PostgreSQL dan behaviornya sama di kedua DB tersebut. 
+        - Isolation level ini bisa mencegah dirty-read di MySQL, tapi akan berlaku non-repeatable read dan phantom read di kedua DB MySQL dan PostgreSQL.
+    - Repeatable Read: 
+        - Untuk proses baca data, MySQL dan PostgreSQL memiliki behavior yang sama dan level ini bisa mencegah non-repeatable read dan phantom read.
+        - Untuk proses concurrent update ada perbedaan handling di MySQL dan PostgreSQL:
+
+            Contoh skenario concurrent update:
+            -----------------------------------------------------------------------------
+            | Step  |       Trx 1                   |           Trx 2                   |
+            -----------------------------------------------------------------------------
+            |   1   |   BEGIN                       |   BEGIN                           |
+            |   2   |   Get data return value: 100  |   Get data return value: 100      |
+            |   3   |   Update: value - 30          |   Update value: value - 50        |
+            |   4   |   Get data return value: 70   |   Get data return value: 50       |
+            |   5   |   COMMIT (value = 70)         |   COMMIT (setelah Trx 1)          |
+            -----------------------------------------------------------------------------
+
+            - PostgreSQL: 
+                - proses concurrent update, bagi yang melakukan commit terakhir akan mendapati error.
+                - proses pada step 4, masing-masing Trx akan menerima hasil sendiri-sendiri bermula dari 100, karena repeatable-read tidak akan dipengaruhi perubahan nilai dari Trx lain.
+                - dari contoh skenario, di Trx 2 saat melakukan commit di step 5, akan mendapati error ERROR:  could not serialize access due to concurrent update
+            - MySQL:
+                - proses concurrent update, bagi yang melakukan commit terakhir akan tetap sukses, tapi nilainya akan mengikuti hasil commit yang lebih dulu.
+                - proses pada step 4, masing-masing Trx akan menerima hasil sendiri-sendiri bermula dari 100, karena repeatable-read tidak akan dipengaruhi perubahan nilai dari Trx lain.
+                - dari contoh skenario, Trx 1 berhasil commit dan nilainya 70, ketika Trx 2 melakukan commit, hasilnya akan 20 karena saat Trx 2 melakukan commit, nilainya sudah berubah dari yang lebih dulu commit yaitu Trx 1.
+        - MySQL dan PostgreSQL di mode Repeatable Read masih bisa mengalami Serialization Anomaly.
+
+            Contoh skenario serializable anomaly:
+
+    - Serializable:
+
 
 Referensi:
 https://en.wikipedia.org/wiki/Isolation_(database_systems)#Concurrency_control
 https://pgdash.io/blog/postgres-transactions.html
-
-Belum dibaca:
+https://www.postgresql.org/docs/current/transaction-iso.html
 https://dev.to/techschoolguru/understand-isolation-levels-read-phenomena-in-mysql-postgres-c2e
