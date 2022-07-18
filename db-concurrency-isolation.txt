@@ -58,6 +58,14 @@
     - Serialization anomaly:
         - akan dibahas dibawah, karena perbedaan handling di MySQL dan PostgreSQL.
 
+- Cara menggunakan opsi isolation level:
+    - MySQL:
+        SET SESSION TRANSACTION ISOLATION LEVEL {level};
+        BEGIN;
+
+    - PostgreSQL:
+        BEGIN TRANSACTION ISOLATION LEVEL {level};
+
 - Beberapa jenis isolation level di DBMS, dimulai dari yang terendah hingga tertinggi:
     - Read Uncommitted: 
         - ini cuman ada di MySQL, kalo di PostgreSQL dia akan berlaku sama seperti Read Committed. 
@@ -91,8 +99,50 @@
         - MySQL dan PostgreSQL di mode Repeatable Read masih bisa mengalami Serialization Anomaly.
 
             Contoh skenario serializable anomaly:
+            -----------------------------------------------------------------------------------------------------------------------------
+            | Step |                    Trx 1                               |                   Trx 2                                   |
+            -----------------------------------------------------------------------------------------------------------------------------
+            |   1  |    BEGIN                                               |   BEGIN                                                   |
+            |   2  |    INSERT INTO persons(name, age) VALUES('adam', 29)   |   INSERT INTO persons(name, age) VALUES('adam', 29)       |
+            |   3  |    SELECT * FROM persons                               |   SELECT * FROM persons                                   |
+            |   4  |    COMMIT                                              |   COMMIT (Setelah Trx 1 commit)                           |
+            -----------------------------------------------------------------------------------------------------------------------------
+            - Skenario anomaly diatas, ketika ada concurrent insert dengan data yang sama.
+            - Pada step 3, Trx 1 saat setelah insert akan mendapati 1 record data adam di insert dengan id 9, dan Trx 2 setelah insert juga mendapati data adam sebanyak 1 record dengan id 10.
+            - Setelah kedua Trx melakukan commit, saat melakukan select data, ternyata data adam ada 2 record, dengan id 9 (dari Trx 1) dan id 10 (dari Trx 2).
+
+                id  |  name   | age
+                ----+---------+-----
+                  8 | demo1   |  13
+                  9 | adam    |  29
+                 10 | adam    |  29
+
 
     - Serializable:
+        - Serializable anomaly bisa dicegah dengan isolation level Serializable.
+        - Isolation level serializable punya cara berbeda antara MySQL dan PostgreSQL.
+
+        Contoh:
+            -----------------------------------------------------------------------------------------------------------------------------
+            | Step |                    Trx 1                               |                   Trx 2                                   |
+            -----------------------------------------------------------------------------------------------------------------------------
+            |   1  |    BEGIN                                               |   BEGIN                                                   |
+            |   2  |    INSERT INTO persons(name, age) VALUES('adam', 29)   |   INSERT INTO persons(name, age) VALUES('adam', 29)       |
+            |   3  |    SELECT * FROM persons                               |   SELECT * FROM persons                                   |
+            |   4  |    COMMIT                                              |   COMMIT (Setelah Trx 1 commit)                           |
+            -----------------------------------------------------------------------------------------------------------------------------
+
+        - PostgreSQL:
+            - Isolation level serializable bisa menangani permasalahan Serializable anomaly dengan dependencies detection.
+            - Dengan case yang sama, setelah Trx 1 berhasil commit dan ketika Trx 2 melakukan commit, maka langsung dapet error.
+                ERROR:  could not serialize access due to read/write dependencies among transactions
+                DETAIL:  Reason code: Canceled on identification as a pivot, during commit attempt.
+                HINT:  The transaction might succeed if retried.
+        - MySQL:
+            - Isolation level serializable bisa menangani permasalahan Serializable anomaly dengan mekanisme locking.
+            - WIP
+- Perlu di ingat, semakin tinggi level isolation, maka ada beberapa error yang harus di handle pada aplikasi, seperti deadlock, serialize error, lock timeout dll.
+- Semakin tinggi level isolation, maka performa write ke database juga menurun karena semakin strict isolation level perlu beberapa hal yang harus dilakukan di RDBMS.
 
 
 Referensi:
