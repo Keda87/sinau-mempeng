@@ -1,0 +1,7 @@
+- socket:
+    - tempat untuk komunikasi dengan program yang lain menggunakan standard UNIX file descriptor.
+
+belum dibaca:
+https://beej.us/guide/bgnet/html/
+https://hpbn.co/
+https://internalpointers.com/post/network-programming-beginners-overview
