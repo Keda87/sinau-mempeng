@@ -1,0 +1,15 @@
+JIT (Just in Time)
+
+- JIT compilation bisa disebut juga dynamic translation atau runtime compilation.
+- mekanisme proses baca kode yang juga melakukan proses kompilasi pada saat dijalankan (runtime).
+- JIT akan melakukan analisa dari kode yang akan dieksekusi dan mengidentifikasi bagian-bagian mana yang tercepat dari proses kompilasi atau re-kompilasi.
+
+
+referensi:
+https://en.wikipedia.org/wiki/Just-in-time_compilation
+
+belum dibaca:
+https://www.geeksforgeeks.org/just-in-time-compiler/
+-------
+
+AOT (Ahead of Time)
