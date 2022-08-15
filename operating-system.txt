@@ -1,6 +1,15 @@
+OS
+
 course:
 https://pages.cs.wisc.edu/~remzi/OSTEP/
 https://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/Discussion/videos.html
 
 belum dibaca:
 https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md
+
+
+------------------
+Linux Driver
+
+belum dibaca:
+https://tldp.org/LDP/lkmpg/2.6/html/lkmpg.html#AEN121
