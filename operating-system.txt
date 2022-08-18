@@ -9,7 +9,8 @@ https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md
 
 
 ------------------
-Linux Driver
+Linux Driver:
+https://lwn.net/Kernel/LDD3/
 
 belum dibaca:
 https://tldp.org/LDP/lkmpg/2.6/html/lkmpg.html#AEN121 # obsolete
