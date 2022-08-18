@@ -12,4 +12,4 @@ https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md
 Linux Driver
 
 belum dibaca:
-https://tldp.org/LDP/lkmpg/2.6/html/lkmpg.html#AEN121
+https://tldp.org/LDP/lkmpg/2.6/html/lkmpg.html#AEN121 # obsolete
