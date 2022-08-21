@@ -10,6 +10,14 @@ https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md
 
 ------------------
 Linux Driver:
+- pasang module ke dalem kernel bisa pake command 
+  $ sudo insmod file_name.ko
+- hapus module dari kernel bisa pake command
+  $ sudo rmmod file_name
+- liat log module dalem kernel
+  $ tail -f /var/log/kern.log
+
+
 https://lwn.net/Kernel/LDD3/
 
 belum dibaca:
