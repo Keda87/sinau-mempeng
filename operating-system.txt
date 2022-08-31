@@ -16,6 +16,8 @@ Linux Driver:
   $ sudo rmmod file_name
 - liat log module dalem kernel
   $ tail -f /var/log/kern.log
+- liat info module kernel
+  $ sudo modinfo file_name.ko
 
 
 https://lwn.net/Kernel/LDD3/
