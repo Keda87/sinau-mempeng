@@ -20,7 +20,9 @@ Linux Driver:
   $ sudo modinfo file_name.ko
 
 
+referensi:
 https://lwn.net/Kernel/LDD3/
+https://www.youtube.com/watch?v=x1Y203vH-Dc&list=PLCGpd0Do5-I3b5TtyqeF1UdyD4C-S-dMa
 
 belum dibaca:
 https://tldp.org/LDP/lkmpg/2.6/html/lkmpg.html#AEN121 # obsolete
