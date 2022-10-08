@@ -1,4 +1,7 @@
 https://www.youtube.com/watch?v=FExZvpVvYxA
 
+https://webrtcforthecurious.com/docs/01-what-why-and-how/
+
 belum dibaca:
+https://gabrieltanner.org/blog/broadcasting-ion-sfu/
 http://blog.brkho.com/2017/03/15/dive-into-client-server-web-games-webrtc/
