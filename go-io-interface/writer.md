@@ -84,6 +84,7 @@ Penjelasan:
 ## Referensi
 Sudah dibaca:
 - https://medium.com/dev-bits/explaining-common-i-o-patterns-in-go-cd01b1b749c4
+- https://nathanleclaire.com/blog/2014/07/19/demystifying-golangs-io-dot-reader-and-io-dot-writer-interfaces/
 
 Belum dibaca:
-- https://nathanleclaire.com/blog/2014/07/19/demystifying-golangs-io-dot-reader-and-io-dot-writer-interfaces/
+- https://www.developer.com/languages/input-output-golang/
