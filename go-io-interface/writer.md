@@ -81,6 +81,8 @@ Penjelasan:
 - `w1` dan `w2` adalah writer dari `bytes.Buffer`
 - `mw` ini yang akan melakukan tulis ke beberapa writer (`w1` dan `w2`) bersamaan.
 
+### 4. 
+
 ## Referensi
 Sudah dibaca:
 - https://medium.com/dev-bits/explaining-common-i-o-patterns-in-go-cd01b1b749c4
@@ -88,3 +90,6 @@ Sudah dibaca:
 
 Belum dibaca:
 - https://www.developer.com/languages/input-output-golang/
+- https://www.gobeyond.dev/io/
+- https://yourbasic.org/golang/io-reader-interface-explained/
+- https://medium.com/go-walkthrough/go-walkthrough-io-package-8ac5e95a9fbd
