@@ -55,10 +55,31 @@ Penjelasan:
 ```go
 package main
 
+import (
+  "bytes"
+  "io"
+  "fmt"
+)
+
 func main() {
+
+  var (
+    w1 bytes.Buffer
+    w2 bytes.Buffer
+  )
+  
+  mw := io.MultiWriter(&w1, &w2)
+  
+  fmt.Fprintln(mw, "Hello world")
+  
+  fmt.Println(w1.String())
+  fmt.Println(w2.String())
   
 }
 ```
+Penjelasan:
+- `w1` dan `w2` adalah writer dari `bytes.Buffer`
+- `mw` ini yang akan melakukan tulis ke beberapa writer (`w1` dan `w2`) bersamaan.
 
 ## Referensi
 Sudah dibaca:
