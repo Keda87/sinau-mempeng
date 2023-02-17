@@ -16,16 +16,16 @@
         Dengan komposit index: `index(author_id, class_id, rank)`
 
     - query yang mendapatkan benefit dari composit index dengan kondisi berikut:
-        - where author_id, class_id, rank
-        - where author_id, class_id
-        - where author_id, rank
-        - where author_id
+        - `WHERE author_id = ... AND class_id = ... AND rank = ...`
+        - `WHERE author_id = ... AND class_id = ...`
+        - `WHERE author_id = ... AND rank = ...`
+        - `WHERE author_id = ...`
 
     - query yang gak berdampak meskipun sudah ada composite index:
-        - where rank
-        - where class_id, rank
-        - where class_id
-        - where rank, class_id, author_id (dibalik)
+        - `WHERE rank = ...`
+        - `WHERE class_id = ... AND rank = ...`
+        - `WHERE class_id = ...`
+        - `WHERE rank = ... AND class_id = ... AND author_id = ... // (dibalik)`
 
     - dalam men-define composite index, selain urutan kolom sangat penting, kardinalitas juga sangat berpengaruh.
         - kardinalitas itu keunikan data dalam table.
