@@ -1,30 +1,31 @@
+# DB Indexing
+
+### Composite Index
 - composite index istilah yang dipakai untuk multi column index.
     - cocok dipake kalo ada kondisi filter dengan beberapa kondisi.
     - urutan kolom sangat berpengaruh, jadi index(a, b, c) berbeda dengan index(c, b, a).
     - contoh praktis penggunaan composite index, dari table berikut.
 
-        |-------------------------------------------------------|
         |   id    |    author_id    |    class_id    |   rank   |
-        |-------------------------------------------------------|
+        |---------|-----------------|----------------|----------|
         |   1     |        6        |      4         |     A    |
         |   2     |        3        |      4         |     C    |
         |   3     |        1        |      1         |     A    |
         |   4     |        8        |      2         |     B    |
-        |-------------------------------------------------------|
 
-        index(author_id, class_id, rank)
+        Dengan komposit index: `index(author_id, class_id, rank)`
 
-        - query yang mendapatkan benefit dari composit index dengan kondisi berikut:
-            - where author_id, class_id, rank
-            - where author_id, class_id
-            - where author_id, rank
-            - where author_id
+    - query yang mendapatkan benefit dari composit index dengan kondisi berikut:
+        - where author_id, class_id, rank
+        - where author_id, class_id
+        - where author_id, rank
+        - where author_id
 
-        - query yang gak berdampak meskipun sudah ada composite index:
-            - where rank
-            - where class_id, rank
-            - where class_id
-            - where rank, class_id, author_id (dibalik)
+    - query yang gak berdampak meskipun sudah ada composite index:
+        - where rank
+        - where class_id, rank
+        - where class_id
+        - where rank, class_id, author_id (dibalik)
 
     - dalam men-define composite index, selain urutan kolom sangat penting, kardinalitas juga sangat berpengaruh.
         - kardinalitas itu keunikan data dalam table.
@@ -35,3 +36,7 @@
             - author    : 1, 2 ... terus bertambah seiring waktu
 
         - dari kolom diatas, kardinalitas paling tinggi ada di kolom author dan kardinalitas terendah ada di rank (karena cuman 5), sehingga urutan composite indexnya (author_id, class_id, rank).
+        
+# Referensi
+- Belum dibaca:
+    - https://dataschool.com/sql-optimization/how-indexing-works/
