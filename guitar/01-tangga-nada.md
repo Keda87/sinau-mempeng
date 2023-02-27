@@ -31,3 +31,6 @@ Selain urutan tangga nada diatas, ketika gitar dipetik dengan kondisi _Open stri
 ![open string](https://jtgt-static.b-cdn.net/images/modules/PMT1/MT-107a.png)
 
 - Nada nya cuman ada 6, karena sesuai jumlah senar di gitar ada 6.
+
+#### Referensi:
+- https://www.youtube.com/watch?v=CyQUqs1vxpo
