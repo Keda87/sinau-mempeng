@@ -23,7 +23,7 @@ Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
 
 - Nada yang ada tanda **'** itu nada lebih tinggi.
   - Contoh: tangga nada diawali dari **Do/C** dan diakhiri dengan **Do/C** (versi lebih tinggi)
-- Jarak tiap nada diatas:
+- Jarak tiap nada dimulai dari **Do** di **C**:
   - **C** ke **D**: 1 nada
   - **D** ke **E**: 1 nada
   - **E** ke **F**: 1/2 nada 
@@ -31,6 +31,7 @@ Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
   - **G** ke **A**: 1 nada 
   - **A** ke **B**: 1 nada 
   - **B** ke **C**: 1/2 nada
+- Nada **Do** bisa dimulai dari mana aja, tidak harus dimulai di **C**.
 
 Selain urutan tangga nada diatas, ketika gitar dipetik dengan kondisi _Open string_, maka urutan tangga nadanya sebagai berikut.
 | E  | A  | D  | G  | B  | E  |
