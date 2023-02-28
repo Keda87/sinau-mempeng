@@ -44,3 +44,4 @@ Selain urutan tangga nada diatas, ketika gitar dipetik dengan kondisi _Open stri
 #### Referensi:
 - https://www.youtube.com/watch?v=CyQUqs1vxpo
 - https://www.youtube.com/watch?v=vQZ7mX8xdbA
+- https://www.youtube.com/watch?v=-BRTDUlX4IE
