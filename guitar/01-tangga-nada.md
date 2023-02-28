@@ -2,7 +2,7 @@
 
 Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
 
-## Fret / Fretboard
+## Fret / Fretboard / Fingerboard
 ![fretboard](https://www.shutterstock.com/image-vector/guitar-fretboard-260nw-609291428.jpg)
 
 ### Jarak nada di Fret
@@ -16,7 +16,7 @@ Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
 - biasanya di tutorial / gambar [tabulasi](https://www.youtube.com/watch?v=pQC3JsbgaTw), senar 6 selalu ditampilkan dibawah (dibalik). Seperti gambar fretboard diatas, senar 6 ada dibawah.
 - _Open string_ istilah yang dipake ketika senar dipetik tanpa menekan _Fret_.
 
-### Urutan tangga nada
+### Urutan tangga nada MAJOR
 | C  | D  | E  | F  | G  | A  | B  |  C' |
 |----|----|----|----|----|----|----| ----|
 | Do | Re | Mi | Fa | So | La | Si | Do' |
@@ -24,14 +24,25 @@ Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
 - Nada yang ada tanda **'** itu nada lebih tinggi.
   - Contoh: tangga nada diawali dari **Do/C** dan diakhiri dengan **Do/C** (versi lebih tinggi)
 - Jarak tiap nada dimulai dari **Do** di **C**:
-  - **C** ke **D**: 1 nada
-  - **D** ke **E**: 1 nada
-  - **E** ke **F**: 1/2 nada 
-  - **F** ke **G**: 1 nada 
-  - **G** ke **A**: 1 nada 
-  - **A** ke **B**: 1 nada 
-  - **B** ke **C**: 1/2 nada
-- Nada **Do** bisa dimulai dari mana aja, tidak harus dimulai di **C**.
+  - **C** ke **D** / **Do**: 1 nada
+  - **D** ke **E** / **Re**: 1 nada
+  - **E** ke **F** / **Mi**: 1/2 nada 
+  - **F** ke **G** / **Fa**: 1 nada 
+  - **G** ke **A** / **Sol**: 1 nada 
+  - **A** ke **B** / **La**: 1 nada 
+  - **B** ke **C** / **Si**: 1/2 nada
+- Nada **Do** bisa dimulai dari mana aja, tidak harus dimulai di **C**, jadi misal nada **Do** ada di **G**, maka urutannya begini.
+
+| G  | A  | B  | C  | D  | E  | F  |  G' |
+|----|----|----|----|----|----|----| ----|
+| Do | Re | Mi | Fa | So | La | Si | Do' |
+
+Penjelasan:
+- Yang perlu dihapalin itu jarak antar nada
+  - Contoh Nada Major itu **Do Re Mi Fa Sol La Si**
+  - Urutan Nada Major itu **1 1 1/2 1 1 1 1/2**
+- Kenapa setelah G itu A?
+  - Dimulai dari G, kemudian jarak **Do** ke **Re** itu 1 nada (2 fret), maka dari **G** geser 2 Fret ketemu **A** dst sesuai urutannya.
 
 Selain urutan tangga nada diatas, ketika gitar dipetik dengan kondisi _Open string_, maka urutan tangga nadanya sebagai berikut.
 | E  | A  | D  | G  | B  | E  |
