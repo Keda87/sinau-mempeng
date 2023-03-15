@@ -1,4 +1,4 @@
-# Tangga Nada
+# Tangga Nada - Diatonic
 
 Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
 
