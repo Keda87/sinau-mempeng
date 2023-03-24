@@ -21,6 +21,14 @@ Setelah ketemu urutannya, sekarang kita ubah dengan formula family chord yang bi
 - Hasil diatas adalah chord family untuk nada Dasar C. sehingga lagu kalo kunci utamanya C, maka dalam lagu hanya terdiri chord diatas.
 - Jika ada lagu yang menggunakan nada dasar C, tetapi dalam lagu ada chord yang tidak ada di dalam chord family, maka itu menyalahi aturan progresi.
 
+### Tabel Family Chord
+| C | Dm | Em  | F  | G  | Am  | Bdim  |
+|---|----|-----|----|----|-----|-------|
+| D | Em | F#m | G  | A  | Bm  | C#dim |
+| E | F#m| G#m | A  | B  | C#m | D#dim |
+| F | Gm | Am  | A# | C  | Dm  | Edim  |
+| G | Am | Bm  | C  | D  | Em  | F#dim |
+
 #### Referensi:
 - https://www.youtube.com/watch?v=JcBc8mxcC-E
 - https://www.youtube.com/watch?v=IrOuK1CcjXQ
