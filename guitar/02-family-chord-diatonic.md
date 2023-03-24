@@ -32,3 +32,4 @@ Setelah ketemu urutannya, sekarang kita ubah dengan formula family chord yang bi
 #### Referensi:
 - https://www.youtube.com/watch?v=JcBc8mxcC-E
 - https://www.youtube.com/watch?v=IrOuK1CcjXQ
+- https://www.youtube.com/watch?v=xc1PPxTN3Wo
