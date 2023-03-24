@@ -22,12 +22,13 @@ Setelah ketemu urutannya, sekarang kita ubah dengan formula family chord yang bi
 - Jika ada lagu yang menggunakan nada dasar C, tetapi dalam lagu ada chord yang tidak ada di dalam chord family, maka itu menyalahi aturan progresi.
 
 ### Tabel Family Chord
-| C | Dm | Em  | F  | G  | Am  | Bdim  |
-|---|----|-----|----|----|-----|-------|
-| D | Em | F#m | G  | A  | Bm  | C#dim |
-| E | F#m| G#m | A  | B  | C#m | D#dim |
-| F | Gm | Am  | A# | C  | Dm  | Edim  |
-| G | Am | Bm  | C  | D  | Em  | F#dim |
+| Major Key | 1  | 2   | 3   | 4  | 5   | 6   | 7     |
+|-----------|----|-----|-----|----|-----|-----|-------|
+| C         | C  | Dm  | Em  | F  | G   | Am  | Bdim  |
+| D         | D  | Em  | F#m | G  | A   | Bm  | C#dim |
+| E         | E  | F#m | G#m | A  | B   | C#m | D#dim |
+| F         | F  | Gm  | Am  | A# | C   | Dm  | Edim  |
+| G         | G  | Am  | Bm  | C  | D   | Em  | F#dim |
 
 #### Referensi:
 - https://www.youtube.com/watch?v=JcBc8mxcC-E
