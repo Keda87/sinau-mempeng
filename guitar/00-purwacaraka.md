@@ -18,3 +18,5 @@ Formula Nada:
 - **Minor/m**: 1 - b3 - 5
 - **Augmented**: 1 - 3 - #5
 - **Diminished**: 1 - b3 - b5
+- **Suspended 2**: 1 - 2 - 5
+- **Suspended 4**: 1 - 4 - 5
