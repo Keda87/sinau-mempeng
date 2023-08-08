@@ -1,4 +1,4 @@
-# Family Chord dan Chord Progression - Diatonic
+# Family Chord dan Chord Progression
 
 ## Major Family Chord
 
