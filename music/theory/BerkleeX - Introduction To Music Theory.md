@@ -11,3 +11,7 @@ Course: https://learning.edx.org/course/course-v1:BerkleeX+OHARM100x+1T2023/home
 - Perfect 5th (P5)
 - TRIAD
 - Chord Progression
+    - Contoh progresi I IV V = C F G
+    - I sebagai Tonic / Tone Center
+    - IV sebagai Subdominant karena 1 langkah dibawah Dominant
+    - V sebagai Dominant karena chord dominan yang memiliki tendensi untuk kembali ke I (Tonic)
