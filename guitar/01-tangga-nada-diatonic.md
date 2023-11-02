@@ -33,9 +33,9 @@ Sebelum mulai tangga nada, istilah-istilah yang perlu dipahami.
   - **B** ke **C** / **Si**: 1/2 nada
 - Nada **Do** bisa dimulai dari mana aja, tidak harus dimulai di **C**, jadi misal nada **Do** ada di **G**, maka urutannya begini.
 
-| G  | A  | B  | C  | D  | E  | F  |  G' |
-|----|----|----|----|----|----|----| ----|
-| Do | Re | Mi | Fa | So | La | Si | Do' |
+| G  | A  | B  | C  | D  | E  | F#  |  G' |
+|----|----|----|----|----|----|-----| ----|
+| Do | Re | Mi | Fa | So | La | Si  | Do' |
 
 Penjelasan:
 - Yang perlu dihapalin itu jarak antar nada
