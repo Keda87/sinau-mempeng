@@ -43,4 +43,6 @@
 - 3 scale ini berdiri diatas minor triad: 1 b3 5
 
 
-Referensi: https://www.youtube.com/watch?v=gXq0EsDBrWw
+Referensi: 
+https://www.youtube.com/watch?v=gXq0EsDBrWw
+https://www.youtube.com/watch?v=JCEWMhqmWfw
