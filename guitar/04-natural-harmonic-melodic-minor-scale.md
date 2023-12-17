@@ -44,5 +44,5 @@
 
 
 Referensi: 
-https://www.youtube.com/watch?v=gXq0EsDBrWw
-https://www.youtube.com/watch?v=JCEWMhqmWfw
+- https://www.youtube.com/watch?v=gXq0EsDBrWw
+- https://www.youtube.com/watch?v=JCEWMhqmWfw
