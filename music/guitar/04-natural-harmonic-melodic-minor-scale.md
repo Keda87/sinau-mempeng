@@ -44,5 +44,6 @@
 
 
 Referensi: 
-- https://www.youtube.com/watch?v=gXq0EsDBrWw
-- https://www.youtube.com/watch?v=JCEWMhqmWfw
+- [Exploring Melodic Minor - Everything You Need To Know](https://www.youtube.com/watch?v=gXq0EsDBrWw)
+- [GMI Harmonic Minor Scale](https://www.youtube.com/watch?v=JCEWMhqmWfw)
+- [Simplifying melodic minor](https://www.youtube.com/watch?v=Ab3nqlbl9us)
