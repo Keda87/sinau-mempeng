@@ -11,5 +11,9 @@
   | Lydian     | F | G | A | B | C | D | E |
   | Mixolydian | G | A | B | C | D | E | F |
   | Aeolian    | A | B | C | D | E | F | G | Karena dimulai dari nada ke-6, ini sama dengan natural minor scale, karena nada ke-6 itu relative minor nya. | 
-  | Locrian    | B | C | D | E | F | G | A |  
+  | Locrian    | B | C | D | E | F | G | A |
+
+
+Referensi:
+- https://www.youtube.com/watch?v=QT4p_BzfToU
   
