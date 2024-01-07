@@ -10,6 +10,9 @@
     | ----------|----|-----|-----|-----|
     | Section 2 | IV | IV  |  I  |  I  |
     | Section 3 | V  | IV  |  I  |  V  |
+
+### Blues Phrasing
+- https://www.youtube.com/watch?v=EquYDSZ0T_8
     
 
 
