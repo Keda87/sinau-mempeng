@@ -11,6 +11,8 @@
     | Section 2 | IV | IV  |  I  |  I  |
     | Section 3 | V  | IV  |  I  |  V  |
 
+  - biasanya progresi **I IV V** akan dimainkan di chord Dominant7 semua
+
 ### Blues Phrasing
 - https://www.youtube.com/watch?v=EquYDSZ0T_8
     
