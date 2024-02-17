@@ -18,6 +18,11 @@
     mysqlx-bind-address     = 127.0.0.1
     ```
 
+    Restart mysql biar perubahan ke-apply.
+    ```bash
+    $ sudo systemctl restart mysql
+    ```
+
 - Setup user & privilege.
     ```sql
     mysql> CREATE USER '<your user>'@'%' IDENTIFIED BY '<your password>';
@@ -29,3 +34,7 @@
     mysql> FLUSH PRIVILEGES;
     Query OK, 0 rows affected (0.00 sec)
     ```
+
+Referensi:
+https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
+
