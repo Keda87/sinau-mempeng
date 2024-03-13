@@ -9,3 +9,4 @@ Pentatonic scale juga ada 2 jenis:
 Referensi: 
 - https://www.guitarlessonworld.com/lessons/pentatonic-scales/
 - https://www.youtube.com/watch?v=dvtYbbOpwX0 (pentatonic di semua fretboard semua nada)
+- https://www.youtube.com/watch?v=tvadVylzmsc (pentatonic subsitution)
