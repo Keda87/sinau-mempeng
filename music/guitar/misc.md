@@ -28,3 +28,6 @@
 3. Ubah chord nya jadi minor, misal:
    - chord semula: C C F C
    - berubah jadi: Cm Cm Fm Cm
+  
+# Improvisation
+- improvisation approach isn't she lovely: https://www.youtube.com/watch?v=CNCztNX-vDE
