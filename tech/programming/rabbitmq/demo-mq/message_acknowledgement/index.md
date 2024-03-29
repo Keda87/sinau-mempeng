@@ -7,8 +7,33 @@
   - ketika multiple consumer tidak ada yang berhasil ack, maka message akan kembali di re-queue ke queue.
 - secara default ack timeout itu 30 menit, untuk memaksa consumer ack message sehingga menghindari bug message stuck yang gak akan pernah di acknowledge.
   - untuk config ack timeout bisa diubah [disini](https://www.rabbitmq.com/docs/consumers#acknowledgement-timeout).
-
-
+- Untuk manual acknowledgement yang perlu dilakukan, merubah config consumer.
+  - Sebelum:
+  ```go
+  msgs, err := ch.Consume(
+      q.Name, // queue
+      "",     // consumer
+      true,   // auto-ack
+      false,  // exclusive
+      false,  // no-local
+      false,  // no-wait
+      nil,    // args 
+  )
+  ```
+  - Sesudah:
+  ```go
+  msgs, err := ch.Consume(
+      q.Name, // queue
+      "",     // consumer
+      false,  // auto-ack (disabled)
+      false,  // exclusive
+      false,  // no-local
+      false,  // no-wait
+      nil,    // args 
+  )
+  ```
+  kemudian di consumer, diakhir perlu panggil `d.Ack(false)` untuk menandakan message berhasil di acknowledge.
+  
 ```mermaid
 graph TD;
     Producer[Producer: akan kirim pesan ke queue]-->hello-queue;
