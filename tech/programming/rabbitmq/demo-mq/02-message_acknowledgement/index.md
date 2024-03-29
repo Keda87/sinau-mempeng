@@ -1,4 +1,4 @@
-# RabbitMQ Message Acknowledgement.
+# RabbitMQ Message Acknowledgement
 
 - Message acknowledgement ini diperlukan, ketika consumer sedang jalan, tetapi sebelum proses selesai terjadi error.
 - Jika pake `auto-ack`, message yang sudah diterima consumer akan langsung dihapus dari queue, sedangkan jika ack manual, pesan akan dikembalikan ke queue selama belum di ack di consumer.
