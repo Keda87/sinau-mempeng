@@ -12,6 +12,6 @@
 ```mermaid
 graph TD;
     Producer[Producer: akan kirim pesan ke queue]-->hello-queue;
-    Consumer[Consumer-1: gagal ack message]-->hello-queue;
-    Consumer[Consumer-2: terima message yang gagal di ack]-->hello-queue;
+    Consumer-1[Consumer-1: gagal ack message]-->hello-queue;
+    Consumer-2[Consumer-2: terima message yang gagal di ack]-->hello-queue;
 ```
