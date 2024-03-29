@@ -1,8 +1,10 @@
 package main
 
 import (
-	amqp "github.com/rabbitmq/amqp091-go"
 	"log"
+	"time"
+
+	amqp "github.com/rabbitmq/amqp091-go"
 )
 
 func failOnError(err error, msg string) {
@@ -45,6 +47,8 @@ func main() {
 	go func() {
 		for d := range msgs {
 			log.Printf("Received a message: %s", d.Body)
+			time.Sleep(time.Second * 5) // simulate long running task.
+			log.Println("done")
 		}
 	}()
 
