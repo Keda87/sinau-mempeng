@@ -6,3 +6,6 @@ https://www.youtube.com/watch?v=YXM7fhI12sg
 
 #### Exercise 1: CM7 Arpeggio
 ![CM7 Arpeggio](extras/05-arpeggio-exercise-1.png "CM7 Arpeggio")
+
+#### Exercise: 7 Chords Arpeggio
+![7 Chord Arpeggio](extras/7chord-arpeggio-practice.png "7 Chord Arpeggio")
