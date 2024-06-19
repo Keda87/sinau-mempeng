@@ -165,3 +165,53 @@ func main() {
 	}
 }
 ```
+
+## ErrGroup
+Selain cara sebelumnya, kita juga bisa compose hasil function dan error menggunakan `ErrGroup`
+```Go
+import (
+	"time"
+	"golang.org/x/sync/errgroup"
+)
+
+func getBalance(ctx context.Context, userID int) (float64, error) {
+	time.Sleep(time.Second)
+	return 10_000_000, nil
+}
+
+func getProfile(ctx context.Context, userID int) (map[string]string, error) {
+	time.Sleep(time.Second)
+	profile := map[string]string{
+		"name": "john doe",
+	}
+	return profile, nil
+}
+
+func main() {
+	var (
+		err 	error
+		balance float64
+		profile map[string]string
+	)
+
+	// untuk bikin context cancelation, jika ada yang error.
+	// jadi kalo ada yang error, semua goroutine akan di stop.
+	eg, ctx := errgroup.WithContext(context.Background())
+
+	eg.Go(func() error {
+		profile, err = getProfile(ctx, 100)
+		return err
+	})
+
+	eg.Go(func() error {
+		balance, err = getBalance(ctx, 100)
+	})
+
+	if err = eg.Wait(); err != nil {
+		panic(err)
+	}
+}
+```
+
+Referensi:
+- https://blog.devtrovert.com/p/go-errgroup-you-havent-used-goroutines
