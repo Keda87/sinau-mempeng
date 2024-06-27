@@ -1,0 +1,1 @@
+- Rinaldi Munir https://informatika.stei.itb.ac.id/~rinaldi.munir/
