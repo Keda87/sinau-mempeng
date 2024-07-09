@@ -31,3 +31,22 @@
   
 # Improvisation
 - improvisation approach isn't she lovely: https://www.youtube.com/watch?v=CNCztNX-vDE
+
+# Setup Digital Multiefek dan Amplifier
+
+- Setiap preset multiefek pasti selalu ada **Cab Simulator** dan **Amp Simulator**
+- Setiap amplifier itu selalu ada **Preamp** dan **Speaker** atau biasanya disebut **Amp Combo***
+- Routing Multiefek ke Amplifier:
+  - Gitar.
+  - Input Multiefek. (sudah ada preamp dari cabsim dan ampsim, jadi cabsim dan ampsim harus mati)
+  - Input Amplifier. (sudah ada preamp ampli)
+- Routing Multiefek ke Amplifier (dengan Fx Loop):
+  - Gitar.
+  - Input Multiefek. (cabsim harus mati, karena pake speaker ampli, ampsim boleh nyala)
+  - Fx Loop Amplifier. (Fx loop ini preamp nya mati, makanya multiefek boleh pake ampsim. tapi speaker nyala jadi multiefek gak boleh pake cabsim)
+- Routing Multiefek ke Flat Speaker:
+  - Gitar
+  - Input Multiefek. (cabsim boleh nyala, ampsim boleh nyala)
+  - Input Flat Speaker.
+ 
+  Referensi: https://www.youtube.com/watch?v=Ft9JrtT7Q10
