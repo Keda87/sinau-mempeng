@@ -6,7 +6,7 @@ https://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/Discussion/videos.html
 
 belum dibaca:
 https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md
-
+https://sysprog21.github.io/lkmpg
 
 ------------------
 Linux Driver:
