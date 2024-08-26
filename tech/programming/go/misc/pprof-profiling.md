@@ -24,6 +24,16 @@ func main() {
         },
     }))
 }
+```
+Nanti kalo udah bisa diakses disini [http://target-host.com/debug/pprof/](debug/pprof/).
 
+Semisal pengen analisa durasi waktu tertentu, bisa tambahin query param `?seconds=...` untuk ambil data dalam rentang waktu tersebut.
 
+Contoh: [http://target-host.com/debug/pprof/heap/?seconds=30](/debug/pprof/heap/?seconds=30) untuk ambil data heap selama 30 detik.
+
+### Cara Analisa Menggunakan pprof
+
+Setelah download file binary, analisa dengan web UI bisa dengan command berikut.
+```bash
+$ go tool pprof -http=:8090 <nama_file>
 ```
