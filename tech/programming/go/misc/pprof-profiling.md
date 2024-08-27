@@ -37,3 +37,7 @@ Setelah download file binary, analisa dengan web UI bisa dengan command berikut.
 ```bash
 $ go tool pprof -http=:8090 <nama_file>
 ```
+
+Referensi:
+- https://stackademic.com/blog/profiling-go-applications-in-the-right-way-with-examples
+- https://github.com/google/pprof/blob/main/doc/README.md
