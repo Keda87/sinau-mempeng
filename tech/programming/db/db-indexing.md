@@ -44,6 +44,7 @@
     - secara default, index di PostgreSQL itu pake B-Tree.
 - Hash
     - Cocok digunakan untuk kolom yang hanya perlu operasi `=`
+    - gak bisa untuk unique index.
     - DDL hash index `CREATE INDEX idx_name ON table USING HASH (column);`
 - GIN (General Inverted Index)
     - Cocok digunakan untuk tipe data yang isinya multiple (JSONB, Array, Hstore)
