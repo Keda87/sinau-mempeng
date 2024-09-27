@@ -30,3 +30,7 @@ Menghemat biaya egress Amazon S3 bisa menjadi penting, terutama jika Anda mengel
 - **Intelligent-Tiering**: Gunakan kelas penyimpanan S3 Intelligent-Tiering yang secara otomatis memindahkan data antara tingkat yang paling hemat biaya berdasarkan pola akses.
 
 Dengan menerapkan kombinasi strategi-strategi ini, Anda dapat mengurangi biaya egress Amazon S3 secara signifikan sambil memastikan kinerja dan aksesibilitas data tetap optimal.
+
+# Case Study: Tokopedia Arsip Objek Menggunakan Glacier
+Belum dibaca:
+https://aws.amazon.com/id/blogs/indonesia/strategi-tokopedia-mengoptimalkan-pengarsipan-miliaran-objek-pada-amazon-s3/
