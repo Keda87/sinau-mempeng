@@ -29,3 +29,16 @@ JOIN LATERAL jsonb_array_elements(orders.contents) AS order_meta ON true
 JOIN menus ON menus.id = (order_meta->>'menu_id')::uuid AND menus.deleted_at IS NULL
 WHERE orders.id = '...'
 ```
+
+### Update JSONB using String Replace.
+
+Contoh replace url lama dengan url baru:
+```sql
+UPDATE table_name 
+SET column_name = (REGEXP_REPLACE(
+    column_name::text,
+    'https:\/\/subdomain\.domain\.com|https:\/\/anothersubdomain\.domain\.com',
+    'https://new-domain.com',
+    'g'
+))::jsonb where condition = ...;
+```
