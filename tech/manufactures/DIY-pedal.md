@@ -1,4 +1,4 @@
-# DIY Pedal
+# DIY Pedal Analog
 
 Dasar yang perlu dipahami sebelum bikin pedal.
 1. Pahami Resistors, Capacitors, dan Diodes dan bagaimana komponen ini mempengaruhi signal, seperti tone, gain, clipping.
